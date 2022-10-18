@@ -5,7 +5,7 @@ You don't need to import Frame.
 
 It will also set Frame.
 
-Currently It's working with JLabel, 
+Currently It's working with JLabel, JTextField, JButton
 
 Will update soon with other Components also !!!.
 
