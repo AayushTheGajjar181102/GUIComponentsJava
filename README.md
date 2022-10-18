@@ -9,5 +9,6 @@ Currently It's working with JLabel, JTextField, JButton
 
 Will update soon with other Components also !!!.
 
-//SEE Example on Components.java
-//SEE Latest Example on Form.java
+Example on Components.java
+
+Latest Example on Form.java
