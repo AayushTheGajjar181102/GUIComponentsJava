@@ -42,12 +42,9 @@ public class Form extends ManageComponents implements ActionListener{
 			for(JTextField text : input){
 				
 				if(text.getText().equals(""))
-					setLabel(index, recent(start, label).getText()+" = null");
+					setLabel(index++, recent(start++, label).getText()+" = null");
 				else
-					setLabel(index, recent(start, label).getText()+" = "+text.getText());
-				
-				index++;
-				start++;
+					setLabel(index++, recent(start++, label).getText()+" = "+text.getText());
 			}
 		}
 	}
