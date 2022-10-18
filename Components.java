@@ -1,21 +1,57 @@
 package components;
 
-public class Components extends ManageComponents{
+import java.util.*;
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+
+public class Components extends ManageComponents implements ActionListener{
 	
+	String[] labels = {"First Name", "Last Name", "Email", "Mobile No"};
 	
-	String[] name = {"Aayush", "Shivam", "Jenil", "Tirth", "Anshul", "Riddhi", "Diya", "Nirali"};
 	Components(){
 		
-		super("My Frame");
+		super("Student Form");
 		
-		addLabel("Hello World");
+		for(String label : labels){
+			addLabel(label);
+			addTextField();
+		}
 		
-		for(int i=0; i<name.length; i++)
-			addLabel(name[i]);
+		addButton("submit");
+		button.get(button.size()-1).addActionListener(this);
+		
+		for(int i=0; i<4; i++)
+			addLabel();
+		
+		setFrame();
 	}
+	
+	
+	public void actionPerformed(ActionEvent e){
+		
+		int setindex = 3;
+		int getindex = -1;
+		
+		if(e.getActionCommand() == "submit"){
+			
+			System.out.println("Submit Button is clicked ...");
+			
+			for(JTextField text : input){
+				
+				if(text.getText().equals(""))
+					setLabel(++setindex, text.getText());
+				else
+					setLabel(++setindex, label.get(++getindex).getText()+" = "+text.getText());
+					
+			}
+		}
+	}
+	
 	
 	public static void main(String[] args){
 		
-		new Components();
+		Components com = new Components();
+		com.setFrame();
 	}
 }
