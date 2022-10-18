@@ -4,7 +4,7 @@ import javax.swing.*;
 import components.*; // new
 import java.awt.event.*;
 
-public class Form extends ManageComponents implements ActionListener{
+public class Form extends ManageComponents{
 	
 	String[] labels = {"First Name", "Last Name", "Email", "Mobile No"};
 	
@@ -17,8 +17,7 @@ public class Form extends ManageComponents implements ActionListener{
 			addTextField();
 		}
 		
-		addButton("Submit");
-		recent(button).addActionListener(this);
+		addButton("Submit", true);
 		
 		for(int i=0; i<labels.length; i++)
 			addLabel();
@@ -37,6 +36,7 @@ public class Form extends ManageComponents implements ActionListener{
 		int start = 0;
 		
 		if(e.getActionCommand() == "Submit"){
+			
 			System.out.println("submit button clicked.");
 			
 			for(JTextField text : input){
@@ -48,5 +48,4 @@ public class Form extends ManageComponents implements ActionListener{
 			}
 		}
 	}
-	
 }
