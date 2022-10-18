@@ -23,8 +23,6 @@ public class Components extends ManageComponents implements ActionListener{
 		
 		for(int i=0; i<4; i++)
 			addLabel();
-		
-		setFrame();
 	}
 	
 	
