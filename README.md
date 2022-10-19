@@ -9,6 +9,4 @@ Currently It's working with JLabel, JTextField, JButton
 
 Will update soon with other Components also !!!.
 
-Example on Components.java
-
-Latest Example on Form.java
+Examples on main.src...
