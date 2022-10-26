@@ -3,7 +3,7 @@ package classes;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
-import components.*;
+import components.*; //new
 
 class CheckBox extends ManageComponents{
 	
