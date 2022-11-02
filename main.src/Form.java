@@ -14,15 +14,14 @@ public class Form extends ManageComponents{
 		
 		super("Registration Form");
 		
-		for(String label : labels){
-			addLabel(label);
-			addTextField();
+		for(String text : labels){
+			
+			addSingle(label, text);
+			addSingle(input);
 		}
 		
-		addButton("Submit", true);
-		
-		for(int i=0; i<labels.length; i++)
-			addLabel();
+		addSingle(button, "Submit", true);
+		addMultiples(label, labels.length);
 		
 		setFrame();
 	}
@@ -44,9 +43,9 @@ public class Form extends ManageComponents{
 			for(JTextField text : input){
 				
 				if(text.getText().equals(""))
-					setLabel(index++, recent(start++, label).getText()+" = null");
+					setSingle(label, index++, recent(start++, label).getText()+" = null");
 				else
-					setLabel(index++, recent(start++, label).getText()+" = "+text.getText());
+					setSingle(label, index++, recent(start++, label).getText()+" = "+text.getText());
 			}
 		}
 	}

@@ -15,12 +15,13 @@ public class Rectangle extends ManageComponents{
 		super("Rectangle Area");
 		
 		for(String size : recsize){
-			addLabel(size);
-			addTextField();
+			
+			addSingle(label, size);
+			addSingle(input);
 		}
 			
-		addButton("Submit", true);
-		addLabel();
+		addSingle(button, "Submit", true);
+		addSingle(label);
 		
 		setFrame();
 	}
