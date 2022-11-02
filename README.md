@@ -5,3 +5,5 @@
 // Currently it's working with JLabel, JTextField, JButton and JCheckBox.
 
 // Examples on main.src
+
+// Here, JLabel = label, JTextField = input, JButton = button, JCheckbox = checkbox.
