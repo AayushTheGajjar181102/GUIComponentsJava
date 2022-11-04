@@ -12,9 +12,10 @@ public class CheckBox extends ManageComponents{
 		
 		super("Select CheckBox");
 		
-		addMultiples(label, null, "Select : ");
+		addMultiples(label, new JLabel(), null, "Select : ");
 		
-		addMultiples(checkbox, true, "C++", "Java", "Python", "JavaScript");
+		addMultiples(checkbox, new JCheckBox(), true, "C++", "Java", "Python", "JavaScript");
+		
 		
 		setFrame();
 	}

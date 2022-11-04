@@ -16,12 +16,12 @@ public class Rectangle extends ManageComponents{
 		
 		for(String size : recsize){
 			
-			addSingle(label, size);
-			addSingle(input);
+			addSingle(label, new JLabel(), size);
+			addSingle(input, new JTextField());
 		}
 			
-		addSingle(button, "Submit", true);
-		addSingle(label);
+		addSingle(button, new JButton(), "Submit", true);
+		addSingle(label, new JLabel());
 		
 		setFrame();
 	}

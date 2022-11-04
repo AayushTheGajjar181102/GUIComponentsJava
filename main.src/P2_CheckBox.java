@@ -13,11 +13,11 @@ public class P2_CheckBox extends ManageComponents{
 		super("Select CheckBox");
 		
 		//add multiple checkboxes
-		addMultiples(label, null, "Select : ");
-		addMultiples(checkbox, true, "C++", "Java", "Python", "JavaScript");
+		addMultiples(label, new JLabel(), null, "Select : ");
+		addMultiples(checkbox, new JCheckBox(), true, "C++", "Java", "Python", "JavaScript");
 		
 		//add single checkbox
-		addSingle(checkbox, "Kotlin", true);
+		addSingle(checkbox, new JCheckBox(), "Kotlin", true);
 		
 		setFrame();
 	}
