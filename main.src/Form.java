@@ -16,12 +16,12 @@ public class Form extends ManageComponents{
 		
 		for(String text : labels){
 			
-			addSingle(label, new JLabel(), text);
-			addSingle(input, new JTextField());
+			addSingle(label, text);
+			addSingle(input);
 		}
 		
-		addSingle(button, new JButton(), "Submit", true);
-		addMultiples(label, new JLabel(), labels.length);
+		addSingle(button, "Submit", true);
+		addMultiples(label, labels.length);
 		
 		setFrame();
 	}

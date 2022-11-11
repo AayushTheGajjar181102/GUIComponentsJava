@@ -12,10 +12,9 @@ public class CheckBox extends ManageComponents{
 		
 		super("Select CheckBox");
 		
-		addMultiples(label, new JLabel(), null, "Select : ");
+		addMultiples(label, null, "Select : ");
 		
-		addMultiples(checkbox, new JCheckBox(), true, "C++", "Java", "Python", "JavaScript");
-		
+		addMultiples(checkbox, true, "C++", "Java", "Python", "JavaScript");
 		
 		setFrame();
 	}
@@ -23,5 +22,21 @@ public class CheckBox extends ManageComponents{
 	public static void main(String[] args){
 		
 		new CheckBox();
+	}
+	
+	public void itemStateChanged(ItemEvent e){
+		
+		JCheckBox box = (JCheckBox) e.getItem();
+		String text;
+		
+		if(box.isSelected())
+			text = box.getText()+" CheckBox Selected ...";
+		else
+			text = box.getText()+" CheckBox Unselected ...";
+		
+		//setLabel(0, text, text.length()+400);
+		
+		recent(0, label).setText(text);
+		recent(0, label).setBounds(xstart, getY(), text.length()+400, height);
 	}
 }

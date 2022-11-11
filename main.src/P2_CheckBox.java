@@ -13,11 +13,11 @@ public class P2_CheckBox extends ManageComponents{
 		super("Select CheckBox");
 		
 		//add multiple checkboxes
-		addMultiples(label, new JLabel(), null, "Select : ");
-		addMultiples(checkbox, new JCheckBox(), true, "C++", "Java", "Python", "JavaScript");
+		addMultiples(label, null, "Select : ");
+		addMultiples(checkbox, true, "C++", "Java", "Python", "JavaScript");
 		
 		//add single checkbox
-		addSingle(checkbox, new JCheckBox(), "Kotlin", true);
+		addSingle(checkbox, "Kotlin", true);
 		
 		setFrame();
 	}
@@ -25,5 +25,21 @@ public class P2_CheckBox extends ManageComponents{
 	public static void main(String[] args){
 		
 		new P2_CheckBox();
+	}
+	
+	public void itemStateChanged(ItemEvent e){
+		
+		JCheckBox box = (JCheckBox) e.getItem();
+		String text;
+		
+		if(box.isSelected())
+			text = box.getText()+" CheckBox Selected ...";
+		else
+			text = box.getText()+" CheckBox Unselected ...";
+		
+		//setLabel(0, text, text.length()+400);
+		
+		recent(0, label).setText(text);
+		recent(0, label).setBounds(xstart, recent(0, label).getY(), text.length()+400, height);
 	}
 }
